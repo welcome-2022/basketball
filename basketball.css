@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Nanum+Myeongjo&family=Orbitron:wght@400..900&display=swap');
+
+body {
+    background-color: rgb(41, 42, 53);
+}
+
+h1 {
+    color: white;
+}
+
+#home-el, #guest-el {
+    color: rgb(255, 21, 0);
+    font-family: "Orbitron", sans-serif;
+    background-color: rgb(25, 20, 20);
+    padding: 14px 18px; /* Narrowed padding */
+    width: auto;      /* Adjusts background to fit content */
+    display: inline-block; /* Keeps elements sized to content */
+    border-radius: 4px; /* Optional: gives slight rounded corners */
+}
+
+
+.container {
+    /* border: 1px solid black; */
+    margin: 1rem;
+    padding: 1rem 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around; 
+    gap: 1rem;
+  }
+
+  .child {
+    display: inline-block;
+    /* border: 1px solid red; */
+    border-radius: 4%;
+    padding: 0rem 1rem 5rem 1rem;
+    vertical-align: middle;
+    /* margin: 0 1rem; */
+    background-color: rgb(98, 91, 91);
+    flex: 1 1 200px; /* Shrinks to fit smaller screens with a minimum width */
+  max-width: 200px; /* Sets a max width to prevent overly wide children */
+
+  }
+
+  button {
+    background-color: transparent ;
+    border: 3px solid grey;
+    border-radius: 6%;
+    margin: 5px;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .container {
+      justify-content: center; /* Center items on smaller screens */
+  }
+}
+
+.container {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.child {
+    display: inline-block;
+    border-radius: 4%;
+    padding: 0.5rem 1rem;
+    background-color: rgb(98, 91, 91);
+    flex: 1 1 200px;
+    max-width: 300px;
+    font-size: 1.2rem; /* Default font size */
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+    .child {
+        padding: 0.4rem 0.8rem; /* Reduced padding */
+        font-size: .8rem; /* Smaller font size */
+        max-width: 250px; /* Narrower max width */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .child {
+        width: 100%;
+        max-width: 200px; /* Further reduced max width */
+        padding: 0.3rem 0.6rem; /* Even smaller padding */
+        font-size: 0.6rem; /* Further reduced font size */
+        margin-bottom: 1rem;
+    }
+}
+
